@@ -1,0 +1,17 @@
+<h1>iniciar sesion</h1>
+
+<%= form_with(url: sessions_path, model: @user, local: true) do |f| %>
+
+    <div>
+        <%= f.label :email, 'mail' %>
+        <%= f.email_field :email %>
+    </div>
+
+    <div>
+        <%= f.label :password, 'pass' %>
+        <%= f.password_field :password %>
+    </div>
+
+    <%= f.submit 'iniciar sesion' %>
+
+<% end %>
